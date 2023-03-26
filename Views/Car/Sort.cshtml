@@ -1,0 +1,26 @@
+﻿@model List<Task1.Models.Car.Car>
+@{
+}
+<table class="table">
+    <thead>
+        <tr>
+            <th>CarId</th>
+            <th>Manufacturer</th>
+            <th>Model</th>
+            <th>Color</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var car in Model)
+        {
+            <tr>
+                <td>@car.CarId</td>
+                <td>@car.Manufacturer</td>
+                <td>@car.Model</td>
+                <td>@car.Color</td>
+                <td>@car.Price</td>
+            </tr>
+        }
+    </tbody>
+</table>

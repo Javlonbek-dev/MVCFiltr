@@ -1,0 +1,33 @@
+﻿@model List<Task1.Models.Car.Car>
+@{
+}
+<h1>Cars</h1>
+<div>
+<form method="get" >
+     <button asp-action ="Sort" class="btn btn-warning"> 1-Shart</button>
+    <button asp-action="Sort1" class="btn btn-danger">2-shart</button>
+</form>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>CarId</th>
+            <th>Manufacturer</th>
+            <th>Model</th>
+            <th>Color</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var car in Model)
+        {
+            <tr>
+                <td>@car.CarId</td>
+                <td>@car.Manufacturer</td>
+                <td>@car.Model</td>
+                <td>@car.Color</td>
+                <td>@car.Price</td>
+            </tr>
+        }
+    </tbody>
+</table>
